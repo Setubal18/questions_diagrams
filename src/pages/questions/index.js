@@ -1,20 +1,22 @@
 import React from 'react';
 import './styles.scss'
+import Lista from '../../Components/question'
 const Questions = () => {
 	return (
-		<section className='listas'>
-			<div className='lista'>
-				aaaa
-			</div>
-			<div className='lista'>
-				aaa
-			</div>
-			<div className='lista'>
-				aaa
-			</div>
-			<div className='lista'>
-				aaa
-			</div>
+
+		<section className='main'>
+			<section className='content'>
+				<div className='listas'>
+					<Lista />
+					<Lista />
+					<Lista />
+					<Lista />
+					<Lista />
+					<Lista />
+					<Lista />
+					<Lista />
+				</div>
+			</section>
 		</section>
 	);
 }
