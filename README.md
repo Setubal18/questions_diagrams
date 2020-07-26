@@ -18,6 +18,14 @@ Aplicação react Questions Talk
 | `chore`        | Chores                   | Outras mudanças que não modificam os arquivos da aplicação ou dos testes                                                    |
 | `revert`       | Reversão de commit       | Reversão a um commit anterior                                                                                               |
 
+## Check-List de desenvolvimento
+
+- [ ] Pesquisa de questões e resposta por texto
+- [ ] Paginação
+- [ ] Listagem dinâmica baseado no QuestoesTalk
+- [x] Header _html/csss_
+- [x] Listagem _html/csss_
+
 ## Servidor de desenvolvimento
 
 Execute `yarn start` para iniciar um servidor de desenvolvimento. Navegue ao `http://localhost:3000/`. O app irá recarregar automaticamente caso haja qualquer mudança nos arquivos da aplicação.
