@@ -1,24 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.scss'
 import Lista from '../../Components/question'
-const Questions = () => {
-	return (
+import jsonQuestions from '../../services/service'
 
-		<section className='main'>
-			<section className='content'>
-				<div className='listas'>
-					<Lista />
-					<Lista />
-					<Lista />
-					<Lista />
-					<Lista />
-					<Lista />
-					<Lista />
-					<Lista />
-				</div>
+class Questions extends Component {
+	state = {
+		questoes: [],
+	};
+	componentDidMount() {
+		this.loadQuestoes()
+	};
+
+	loadQuestoes = () => {
+		const { questoes } = jsonQuestions
+		this.setState({ questoes: questoes })
+	};
+	render() {
+		const { questoes } = this.state
+		return (
+
+			<section className='main'>
+				<section className='content'>
+					<div className='listas'>
+						{
+							questoes.map((quest) => {
+								// eslint-disable-next-line no-unused-expressions
+								return < Lista key={quest.ID} questao={quest} />
+
+							})
+						}
+					</div>
+				</section>
 			</section>
-		</section>
-	);
+		);
+	}
 }
 
 export default Questions

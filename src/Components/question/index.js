@@ -1,31 +1,17 @@
 import React from 'react';
 import './styles.scss'
-import img from '../../assets/Capturar.png'
-const lista = () => {
+import Answer from '../answer'
+const lista = ({ questao }) => {
+	const { Dificuldade, Pergunta, Respostas, Imagem, ID } = questao
+
 	return (
 		<div className='lista'>
 			<div>
-				<h4>Aqui e a pergunta</h4>
-				<p>Dificuldade : 1</p>
+				<h4>{Pergunta}</h4>
+				<p>Dificuldade : {Dificuldade}</p>
 			</div>
-			<img src={img} alt="Img" />
-			<section>
-				<h6>Alternativas</h6>
-				<ol>
-					<li>
-						<p>Texto</p>
-					</li>
-					<li>
-						<p>Texto 2</p>
-					</li>
-					<li>
-						<p>Texto 3</p>
-					</li>
-					<li>
-						<p>Texto 4</p>
-					</li>
-				</ol>
-			</section>
+			<img src={Imagem} alt="Img" />
+			<Answer Respostas={Respostas} />
 		</div>
 	);
 };
