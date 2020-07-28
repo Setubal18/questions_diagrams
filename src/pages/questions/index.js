@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles.scss'
 import Lista from '../../Components/question'
 import jsonQuestions from '../../services/service'
+import PaginationList from 'react-pagination-list';
 
 class Questions extends Component {
 	state = {
@@ -22,16 +23,16 @@ class Questions extends Component {
 			<section className='main'>
 				<section className='content'>
 					<div className='listas'>
-						{
-							questoes.map((quest) => {
-								// eslint-disable-next-line no-unused-expressions
-								return < Lista key={quest.ID} questao={quest} />
-
-							})
-						}
+						<PaginationList
+							data={questoes}
+							pageSize={8}
+							layout='row'
+							renderItem={(item, key) => (
+								< Lista key={item.ID} questao={item} />
+							)} />
 					</div>
 				</section>
-			</section>
+			</section >
 		);
 	}
 }
