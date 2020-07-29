@@ -10,9 +10,6 @@ const Header = () => {
 				<li>
 					<a>BPM</a>
 				</li>
-				<li>
-					<a>Diagrama de Classes</a>
-				</li>
 			</ul>
 
 		</header>
