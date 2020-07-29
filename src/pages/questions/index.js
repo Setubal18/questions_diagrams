@@ -25,7 +25,7 @@ class Questions extends Component {
 					<div className='listas'>
 						<PaginationList
 							data={questoes}
-							pageSize={8}
+							pageSize={4}
 							layout='row'
 							renderItem={(item, key) => (
 								< Lista key={item.ID} questao={item} />
